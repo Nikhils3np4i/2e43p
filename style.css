@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+        * {
+            font-family: "Roboto Slab", serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container{
+            height: 60vh;
+            width: 300px;
+            background-color: #272727;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 40px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+        .container.active{
+            background-color: #000;
+            width: 40vw;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .exit{
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        /* panda */
+        .panda {
+            width: 400px;
+            visibility: hidden;
+            position: absolute;
+        }
+        .panda.active{
+            visibility: initial;
+            margin-top: -200px;
+        }
+
+        .mainMessage {
+            color: white;
+            margin-top: 50px;
+            visibility: hidden;
+            position: absolute;
+            bottom: 200px; 
+        }
+        .mainMessage.active{
+            visibility: initial;
+        }
+
+        .log.active{
+            display: none;
+        }
+
+        .exit.active{
+            display: none;
+        }
+
+
+        /* info about me */
+        span{
+            margin-left: 100px;
+        }
+
+        .myImage{
+            width: 100px;
+        }
+
+        .about h2{
+            margin-top: 10px;
+        }
+
+        .infoCircle{
+            color: white;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            width: 30px;
+            visibility: hidden;
+        }
+
+        .infoCircle.active{
+            visibility: initial;
+        }
+
+        .about{
+            width: 300px;
+            position: absolute;
+            left: 50px;
+            bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #272727;
+            color: white;
+            height: 400px;
+            margin-left: -455px;
+            transition: all 0.2s ease-in-out;
+        }
+        .about.active{
+            margin-left: 0px;
+        }
+        .about > p{
+            padding: 15px;
+            margin-top: 20px;
+            line-height: 28px;
+        }
+
+        .warning{
+            color: white;
+        }
+
+        /* info about me */
+
+        @media(max-width: 550px){
+            .panda{
+                width: 300px;
+            }
+            .exit{
+                font-size: .8rem;
+            }
+            .infoCircle{
+                width: 20px;
+            }
+        }
+
+        @media(max-width: 307px){
+            
+
+            .panda{
+                width: 250px;
+            }
+            .mainMessage{
+                font-size: .8rem;
+            }
+
+        }

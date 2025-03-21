@@ -5,105 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message for You</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-
-        * {
-            font-family: "Roboto Slab", serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        .container{
-            height: 60vh;
-            width: 300px;
-            background-color: #272727;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            line-height: 40px;
-            border: 1px solid black;
-            border-radius: 8px;
-        }
-        .container.active{
-            background-color: #000;
-            width: 40vw;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .exit{
-            color: #fff;
-            margin-top: 30px;
-        }
-
-        /* panda */
-        .panda {
-            width: 400px;
-            visibility: hidden;
-            position: absolute;
-        }
-        .panda.active{
-            visibility: initial;
-            margin-top: -200px;
-        }
-
-        .mainMessage {
-            color: white;
-            margin-top: 50px;
-            visibility: hidden;
-            position: absolute;
-            bottom: 200px; 
-        }
-        .mainMessage.active{
-            visibility: initial;
-        }
-
-        .log.active{
-            display: none;
-        }
-
-        .exit.active{
-            display: none;
-        }
-
-        @media(max-width: 550px){
-            .panda{
-                width: 300px;
-            }
-            .exit{
-                font-size: .8rem;
-            }
-        }
-
-        @media(max-width: 307px){
-            .panda{
-                width: 250px;
-            }
-            .mainMessage{
-                font-size: .8rem;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
+<!-- main page -->
 
     <div class="container">
         <p class="log"></p>
@@ -112,51 +19,27 @@
         <p class="log"></p>
         <img src="panda.png" alt="panda" class="panda">
         <p class="mainMessage">T💖KE C💖RE</p>
+
     </div>
 
-
     <p class="exit"></p>
-    <script>
-        let fun = document.querySelectorAll(".log");
-        fun.forEach(element => {
-            element.style.color = "white";
-        });
 
-        setTimeout(() => {
-            fun[0].innerHTML = 'ねぇねぇ、ゆう 😙'
-        }, 2000);
-        setTimeout(() => {
-            fun[1].textContent = "ゆうが大丈夫だといいな💖"
-        }, 4000);
+    <div class="infoAboutMe">
+        <img src="info.png" alt="information" class="infoCircle">
+    </div>
+    <!-- main page -->
 
-        setTimeout(() => {
-            fun[2].textContent = 'またゆうに会えてめっちゃ嬉しい🙃';
-        }, 6000);
-
-        setTimeout(() => {
-            fun[3].textContent = "本当に😁"
-        }, 8000);
+    <!-- about me -->
         
-        setTimeout(() => {
-            let exit = document.querySelector(".exit");
-            let song = new Audio("./song.mp3")
-            exit.innerHTML="Once You done reading that, Click Anywhere on the site";
-            document.addEventListener("click", () =>{
-                document.querySelector(".panda").classList.add("active");
-                document.querySelector(".container").classList.add("active");
-                document.querySelectorAll(".log").forEach(element => {
-                    element.classList.add("active");
-                });
-                document.querySelector(".exit").classList.add("active");
-                song.play();
-                document.querySelector(".mainMessage").classList.add("active");
+    <div class="about">
+        <img src="./myImage.jpg" alt="myImage" class="myImage">
+        <h2>Nikhi Sinha</h2>
+        <p class="warning">This site is owned by <em>Nikhil Sinha</em> And is hosted on a public server, Stealing and Using the Source code without owner's permission is criminal Offence <br> <span> &copy; 2025</span></p>
+    </div>
 
-            });
+    <!-- about me -->
 
-        }, 10000);
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
