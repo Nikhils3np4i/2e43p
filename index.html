@@ -35,6 +35,10 @@
             border: 1px solid black;
             border-radius: 8px;
         }
+        .exit{
+            color: #fff;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
@@ -49,6 +53,7 @@
         <p class="log"></p>
     </div>
 
+    <p class="exit"></p>
     <script>
         let fun = document.querySelectorAll(".log");
         fun.forEach(element => {
@@ -69,10 +74,14 @@
         setTimeout(() => {
             fun[3].textContent = "本当に😁"
         }, 8000);
-
+        
         setTimeout(() => {
-            window.location.href="./panda.html"
-        }, 11000);
+            let exit = document.querySelector(".exit");
+            exit.innerHTML="Once You done reading that, Click Anywhere on the site";
+            document.addEventListener("click", () =>{
+                window.location.href="./panda.html";
+            })
+        }, 10000);
 
 
     </script>

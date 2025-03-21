@@ -94,13 +94,13 @@
         let panda = document.querySelector(".panda")
         let message = document.querySelector(".message");
         let mainMessage = document.querySelector(".mainMessage")
-        document.querySelector(".message").innerHTML="click Anywhere on screen";
+        document.querySelector(".message").innerHTML="once again, click Anywhere on the site";
         var song = new Audio("./song.mp3")
         document.addEventListener("click", () =>{
             song.play();
             panda.classList.add("active");
             message.classList.remove("active");
-            mainMessage.classList.add("active")
+            mainMessage.classList.add("active");
         });
 
         setTimeout(() => {
