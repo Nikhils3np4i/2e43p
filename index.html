@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+        * {
+            font-family: "Roboto Slab", serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container{
+            height: 60vh;
+            width: 300px;
+            background-color: #272727;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 40px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <p class="log"></p>
+        <p class="log"></p>
+        <p class="log"></p>
+        <p class="log"></p>
+    </div>
+
+    <script>
+        let fun = document.querySelectorAll(".log");
+        fun.forEach(element => {
+            element.style.color = "white";
+        });
+
+        setTimeout(() => {
+            fun[0].innerHTML = 'ねぇねぇ、ゆう 😙'
+        }, 2000);
+        setTimeout(() => {
+            fun[1].textContent = "ゆうが大丈夫だといいな💖"
+        }, 4000);
+
+        setTimeout(() => {
+            fun[2].textContent = 'またゆうに会えてめっちゃ嬉しい🙃';
+        }, 6000);
+
+        setTimeout(() => {
+            fun[3].textContent = "本当に😁"
+        }, 8000);
+
+        setTimeout(() => {
+            window.location.href="./panda.html"
+        }, 11000);
+
+
+    </script>
+</body>
+
+</html>
