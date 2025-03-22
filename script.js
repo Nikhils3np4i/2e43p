@@ -32,11 +32,12 @@ let fun = document.querySelectorAll(".log");
                 song.play();
                 document.querySelector(".mainMessage").classList.add("active");
                 document.querySelector(".infoCircle").classList.add("active");
-
+                
             });
 
         }, 10000);
 
-        document.querySelector(".infoCircle").addEventListener("click", () => {
+        document.querySelector(".infoCircle").addEventListener("click", (e) => {
             document.querySelector(".about").classList.toggle("active");
-        })
+            e.stopPropagation();
+        });
